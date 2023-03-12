@@ -15,6 +15,7 @@ services:
       - "8000:8000"
     networks:
       - database-network
+      - host-network
 
   database:
     image: mongo:5.0.15
@@ -33,3 +34,5 @@ volumes:
 
 networks:
   database-network:
+  host-network:
+    driver: bridge
