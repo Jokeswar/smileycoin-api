@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   backend:
-    image: jokeswar/smileycoin-api:master
+    image: jokeswar/smileycoin_api:master
     restart: always
     depends_on:
       - database
