@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+  backend:
+    image: jokeswar/smileycoin-api:master
+    restart: always
+    depends_on:
+      - database
+    environment:
+      MONGODB_DATABASE: "${MONGODB_DATABASE}"
+      MONGO_ROOT_USERNAME: "${MONGO_ROOT_USERNAME}"
+      MONGO_ROOT_PASSWORD: "${MONGO_ROOT_PASSWORD}"
+      MONGODB_HOST: "database"
+      MONGODB_POST: "27017"
+    ports:
+      - "8000:8000"
+    networks:
+      - database-network
+
+  database:
+    image: mongo:5.0.15
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "${MONGO_INITDB_ROOT_USERNAME}"
+      MONGO_INITDB_ROOT_PASSWORD: "${MONGO_INITDB_ROOT_PASSWORD}"
+    volumes:
+      - db-data:/data/db
+    networks:
+      - database-network
+
+volumes:
+  db-data:
+
+
+networks:
+  database-network:
