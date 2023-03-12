@@ -25,7 +25,7 @@ class NodeRepository(AbstractRepository[Node]):
 
 class Student(BaseModel):
     id: Optional[ObjectIdField] = None
-    moodle_id: str
+    username: str
     wallet_address: str
 
     class Config:

@@ -10,6 +10,7 @@ pymongo = "*"
 pydantic = "*"
 pydantic-mongo = "*"
 requests = "*"
+gunicorn = "*"
 
 [dev-packages]
 mypy = "*"

@@ -1,4 +1,5 @@
 __pycache__/
 .env
+!etc/.env
 .vscode/
 .mypy_cache/
