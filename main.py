@@ -20,7 +20,7 @@ async def usernames(username: str) -> object:
 @router.post("/users/{username}/rewards")
 async def rewards(
     username: str,
-    body: RewardsRequestBody = Body(default=None),
+    body: RewardsRequestBody = Body(),
     x_api_key: Optional[str] = Header(default=None),
 ) -> object:
     student_repository = StudentRepository(database=get_database())
