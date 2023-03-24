@@ -10,7 +10,7 @@ function help() {
     echo "submit-reward.sh info"
     echo ""
     echo "  Will return avaialble funds and the address of the wallet associated with the API key provided through"
-    echo "  the 'X-API-Key' header"
+    echo "  the 'SMILEYCOIN_API_KEY' environment variable"
     echo ""
     echo "Before running you must set '\$SMILEYCOIN_ENDPOINT' and '\$SMILEYCOIN_API_KEY' environment variables"
     echo ""
@@ -51,7 +51,7 @@ function info() {
     [ -n "$SMILEYCOIN_API_KEY" ] || fail "The environment variable '\$SMILEYCOIN_API_KEY' is not set"
 
     curl "$SMILEYCOIN_ENDPOINT/api/v1/wallets" \
-        -X GET -H "X-API-Key:$SMILEYCOIN_API_KEY" \
+        -X GET -H "X-API-Key:$SMILEYCOIN_API_KEY"
 }
 
 argument="$1"
