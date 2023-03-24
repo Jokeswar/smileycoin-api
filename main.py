@@ -43,4 +43,9 @@ async def rewards(
     return ""
 
 
+@router.get("/wallets")
+async def wallet_info(x_api_key: Optional[str] = Header(default=None)) -> object:
+    raise HTTPException(status_code=HTTPStatus.NOT_IMPLEMENTED)
+
+
 app.include_router(router)
