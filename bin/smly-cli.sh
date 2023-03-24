@@ -2,12 +2,12 @@
 
 function help() {
     echo ""
-    echo "submit-reward.sh submit <username> <amount> | submit-reward.sh [--help|-h]"
+    echo "smly-cli.sh submit <username> <amount> | smly-cli.sh [--help|-h]"
     echo ""
     echo "  username - the Moodle id of the student"
     echo "  amount - floating point value for the reward (e.g: 10, 10.5)"
     echo ""
-    echo "submit-reward.sh info"
+    echo "smly-cli.sh info"
     echo ""
     echo "  Will return avaialble funds and the address of the wallet associated with the API key provided through"
     echo "  the 'SMILEYCOIN_API_KEY' environment variable"
