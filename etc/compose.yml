@@ -11,11 +11,11 @@ services:
       MONGO_ROOT_PASSWORD: "${MONGO_ROOT_PASSWORD}"
       MONGODB_HOST: "database"
       MONGODB_POST: "27017"
+      GUNICORN_CMD_ARGS: "-w 2"
     ports:
       - "8000:8000"
     networks:
       - database-network
-      - host-network
 
   database:
     image: mongo:5.0.15
@@ -34,5 +34,3 @@ volumes:
 
 networks:
   database-network:
-  host-network:
-    driver: bridge
