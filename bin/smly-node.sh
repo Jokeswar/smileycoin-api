@@ -23,7 +23,7 @@ docker run \
     -p "$HOST_PORT":9332 \
     --mount source="$VOLUME_NAME",destination=/smly-data\
     --name "$CONTAINER_NAME" \
-    smileycoin-node > /dev/null
+    jokeswar/smileycoin-node > /dev/null
 
 echo ""
 echo "INFO:"
