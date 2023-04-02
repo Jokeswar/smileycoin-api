@@ -31,5 +31,5 @@ echo ""
 echo "Container name: $CONTAINER_NAME"
 echo "Volume name:    $VOLUME_NAME"
 echo "Host Port:      $HOST_PORT"
-docker exec smileycoin-node-1679382496 /bin/bash -c 'cat /smly-data/smileycoin.conf' | head -2
+docker exec "$CONTAINER_NAME" /bin/bash -c 'cat /smly-data/smileycoin.conf' | head -2
 echo ""
